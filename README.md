@@ -32,4 +32,4 @@ It demonstrates basic CRUD operations and JWT authentication using FastAPI, SQLA
 
 1. Clone the repository:
    ```bash
-   git clone (https://github.com/AtharvaDubey25/oauth2-authentication-with-fastapi.git)
+   git clone https://github.com/AtharvaDubey25/oauth2-authentication-with-fastapi.git
