@@ -5,7 +5,7 @@ It demonstrates basic CRUD operations and JWT authentication using FastAPI, SQLA
 
 ---
 
-## ✅ Features
+## Features
 
 - User Registration and Authentication (JWT Token)
 - CRUD operations for Users and Books
@@ -15,7 +15,7 @@ It demonstrates basic CRUD operations and JWT authentication using FastAPI, SQLA
 
 ---
 
-## ⚡ Requirements
+##  Requirements
 
 - Python 3.12
 - FastAPI
@@ -28,7 +28,7 @@ It demonstrates basic CRUD operations and JWT authentication using FastAPI, SQLA
 
 ---
 
-## 🚀 Installation
+##  Installation
 
 1. Clone the repository:
    ```bash
