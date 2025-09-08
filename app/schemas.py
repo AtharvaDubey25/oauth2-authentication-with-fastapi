@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel,Field
 from typing import List
 
 class BookBase(BaseModel):
@@ -27,7 +27,7 @@ class showUser(BaseModel):
     username:str
     email:str
     bio:str|None = None
-    books: List[Book]=[]
+    books: List[Book]
     class Config:
         from_attributes=True
 

@@ -8,12 +8,12 @@ from fastapi.security import OAuth2PasswordRequestForm
 
 load_dotenv()
 
-router = APIRouter(prefix='/auth', tags=['Authentication'])
+router = APIRouter(prefix='/auth', tags=['Auth'])
 
-ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES', 30))
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES'))
 
 @router.post('/login')
-async def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):
+def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):
     # find user by email (stored in request.username)
     user = db.query(models.User).filter(models.User.email == request.username).first()
     

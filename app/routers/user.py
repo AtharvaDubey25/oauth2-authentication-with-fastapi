@@ -7,7 +7,7 @@ from ..hashing import Hash
 router = APIRouter(tags=['User'], prefix="/user")
 
 @router.post('/',response_model=schemas.showUser)
-async def create_user(request= schemas.Usercreate, db: Session = Depends(database.get_db)):
+async def create_user(request: schemas.Usercreate, db: Session = Depends(database.get_db)):
     hashed_password = Hash.bcrypt(request.password)
 
     new_user = models.User(
